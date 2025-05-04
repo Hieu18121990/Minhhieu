@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Hình Ảnh Hoá Học</title>
+    <link rel="stylesheet" href="style.css"> </head>
+    <style>
+        /* CSS cơ bản để hình dung bố cục (bạn sẽ cần CSS chi tiết hơn) */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+        }
+
+        .navigation button {
+            background: none;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-left: 5px;
+        }
+
+        .main-content {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Bố cục lưới cơ bản */
+            grid-gap: 15px;
+        }
+
+        .pin {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .pin img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .pin-info {
+            padding: 10px;
+        }
+
+        .pin-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .pin-save {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pin:hover .pin-save {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="logo-just-chemistry.png" alt="Logo Just Chemistry - Trang Chính">
+            </a>
+            <h1>Just Chemistry</h1>
+            <p>Khám phá thế giới hóa học!</p>
+            <form action="/search" method="get" class="search-bar">
+                <input type="text" name="query" placeholder="Tìm kiếm..." />
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="/">Trang chủ</a></li>
+                    <li><a href="/explore">Khám phá</a></li>
+                    <li><a href="/create">Tạo mới</a></li>
+                    <li><a href="/user">Người dùng</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="gallery">
+            <div class="item">
+                <img src="hinh-1-1-don-chat-hop-chat.jpg" alt="Hình 1.1: Một số đơn chất và hợp chất">
+                <p><strong>Hình 1.1. Một số đơn chất và hợp chất</strong></p>
+                <p>
+                    (a) Lá nhôm (aluminium) - Cấu tạo từ các nguyên tử nhôm (màu xám).<br>
+                    (b) Bình khí nitrogen (Nitrogen) - Cấu tạo từ các phân tử nitrogen (hai nguyên tử màu xanh liên kết với nhau).<br>
+                    (c) Cốc nước - Cấu tạo từ các phân tử nước (một nguyên tử oxygen màu đỏ liên kết với hai nguyên tử hydrogen màu trắng).<br>
+                    (d) Muối ăn - Cấu tạo từ các ion natri (Na<sup>+</sup>, màu xanh lá cây) và ion chloride (Cl<sup>-</sup>, màu xanh lá cây nhạt) liên kết với nhau.
+                </p>               
+                 <div class="info">
+                    <h3>Một số đơn chất và hợp chất</h3>
+                    <p class="source">Nguồn: Sách chân trời sáng tạo </p>
+                    <button class="save-button">Lưu</button>
+                </div>
+            </div>
+    
+            <div class="item">
+                <img src="hinh-1-2-ba-the-bromine.jpg" alt="Hình 1.2: Ba thể của bromine">
+        <p><strong>Hình 1.2. Ba thể của bromine</strong></p>
+        <p>
+            (a) Bromine lỏng: Các phân tử bromine (Br<sub>2</sub>, hình cầu màu cam) liên kết yếu và di chuyển tự do trong phạm vi nhất định.<br>
+            (b) Bình chứa bromine lỏng và hơi bromine:
+            <ul>
+                <li>Bromine lỏng ở đáy bình, tương tự như hình (a).</li>
+                <li>Hơi bromine (khí) ở phía trên, các phân tử bromine chuyển động hỗn loạn và chiếm toàn bộ thể tích bình.</li>
+            </ul>
+        </p>
+                <div class="info">
+                    <h3>Ba thể của bromine</h3>
+                    <p class="source">Nguồn: Sách chân trời sáng tạo</p>
+                    <button class="save-button">Lưu</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="hinh-1-3a-thang-hoa-iodine.jpg" alt="(a) Quá trình thăng hoa của iodine">
+                <p class="description">(a) Quá trình thăng hoa của iodine: Iodine rắn (các hạt màu tím) chuyển trực tiếp thành hơi màu tím khi đun nóng.</p>
+            </div>
+            <div>
+                <img src="hinh-1-3b-sat-copper-sulfate-1.jpg" alt="(b) Nhúng đinh sắt vào dung dịch copper(II) sulfate - Bước 1">
+                <img src="arrow.png" alt="Mũi tên chỉ quá trình">
+                <img src="hinh-1-3b-sat-copper-sulfate-2.jpg" alt="(b) Nhúng đinh sắt vào dung dịch copper(II) sulfate - Bước 2">
+                <img src="arrow.png" alt="Mũi tên chỉ quá trình">
+                <img src="hinh-1-3b-sat-copper-sulfate-3.jpg" alt="(b) Nhúng đinh sắt vào dung dịch copper(II) sulfate - Bước 3">
+                <img src="hinh-1-3b-sat-copper-sulfate-4.jpg" alt="(b) Nhúng đinh sắt vào dung dịch copper(II) sulfate - Kết quả">
+                <p class="description">(b) Nhúng đinh sắt vào dung dịch copper(II) sulfate: Đinh sắt (màu xám) phản ứng với dung dịch copper(II) sulfate màu xanh lam, tạo thành dung dịch sắt(II) sulfate màu xanh lục nhạt và kim loại đồng màu đỏ nâu bám trên đinh sắt.</p>
+            </div>                
+            <div class="info">
+                    <h3>Qúa trình biến đổi vật lí và quá trình biến đổi hoá học</h3>
+                    <p class="source"> Nguồn: Sách chân trời sáng tạo</p>
+                    <button class="save-button">Lưu</button>
+                </div>
+            </div>
+            </div>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="#">Giới thiệu</a> |
+            <a href="#">Liên hệ</a> |
+            <a href="#">Điều khoản sử dụng</a> |
+            <span>&copy; 2025 Thư viện Hình ảnh Hóa học</span>
+        </nav>
+    </footer>
+
+    <script>
+        // JavaScript (ví dụ) để thêm hiệu ứng "Lưu" khi hover (CSS cũng có thể làm được)
+        const pins = document.querySelectorAll('.pin');
+        pins.forEach(pin => {
+            const saveButton = pin.querySelector('.pin-save');
+            pin.addEventListener('mouseenter', () => {
+                saveButton.style.opacity = 1;
+            });
+            pin.addEventListener('mouseleave', () => {
+                saveButton.style.opacity = 0;
+            });
+        });
+
+        // Lưu ý: Để có bố cục Masonry thực sự và tải lười, cuộn vô hạn, bạn sẽ cần sử dụng JavaScript phức tạp hơn hoặc các thư viện như Masonry.js.
+    </script>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    max-height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    border-right: none;
+}
+
+.search-bar button {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    border-left: none;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navigation ul li {
+    margin-left: 15px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+    background-color: #eee;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.item .info {
+    padding: 15px;
+}
+
+.item .info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.item .info .source {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.item .info .save-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.item .info .save-button:hover {
+    background-color: #c0392b;
+}
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.item .info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item .info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.item .info .source {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.item .info .save-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.item .info .save-button:hover {
+    background-color: #c0392b;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+footer .container nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .container nav a:hover {
+    text-decoration: underline;
+}
+
+footer .container span {
+    display: block;
+    margin-top: 10px;
+}
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .item .info h3 {
+        font-size: 1.1em;
+    }
+
+    .item .info .source {
+        font-size: 0.85em;
+    }
+
+    .item .info .save-button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 12px;
+        padding: 15px;
+    }
+
+    .item .info h3 {
+        font-size: 1.15em;
+    }
+
+    .item .info .source {
+        font-size: 0.9em;
+    }
+
+    .item .info .save-button {
+        font-size: 0.85em;
+        padding: 7px 11px;
+    }
+}
+
+@media (min-width: 993px) {
+    .gallery {
+        grid-gap: 15px;
+        padding: 20px;
+    }
+
+    .item .info h3 {
+        font-size: 1.2em;
+    }
+
+    .item .info .source {
+        font-size: 0.9em;
+    }
+
+    .item .info .save-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}
+/* style.css (tiếp tục) */
+
+/* ... Các kiểu dáng CSS đã có ... */
+
+.item {
+    /* ... các kiểu dáng hiện tại ... */
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out; /* Thêm transition cho hiệu ứng mượt mà */
+}
+
+.item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng đậm hơn khi hover */
+    transform: scale(1.02); /* Phóng to nhẹ khi hover */
+}
+
+/* ... Các media queries ... */
